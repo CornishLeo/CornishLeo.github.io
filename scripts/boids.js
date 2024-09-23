@@ -544,3 +544,38 @@ function updateValues() {
     desiredSeperationValue.textContent = desiredSeperationSlider.value;
 
 }
+
+const modal = document.getElementById("instructions");
+modal.style.display = "block"
+const closeBtn = document.querySelector(".close");
+
+// Function to open the modal
+function openModal() {
+    modal.style.display = "block";
+}
+
+// Function to close the modal
+function closeModal() {
+    modal.style.display = "none";
+}
+
+// Event listener for the close button
+closeBtn.onclick = closeModal;
+
+// Event listener for outside click
+window.onclick = function(event) {
+    if (event.target == modal) {
+        closeModal();
+    }
+}
+
+// Event listener for the 'i' key press
+window.addEventListener('keydown', function(event) {
+    if (event.key === "i") {
+        if (modal.style.display === "block") {
+            closeModal();
+        } else {
+            openModal();
+        }
+    }
+});

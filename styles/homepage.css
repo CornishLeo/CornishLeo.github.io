@@ -12,23 +12,9 @@ header {
     text-align: center;
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
-}
-
-nav ul li {
-    display: inline;
-    margin: 0 15px;
-}
-
-nav ul li a {
-    color: #fff;
-    text-decoration: none;
-}
 
 section {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .project-grid {
@@ -69,18 +55,87 @@ section {
     flex-grow: 1; 
 }
 
-.project-card a {
-    display: block;
-    text-align: center;
-    background: #333;
-    color: #fff;
-    padding: 0.5rem;
-    text-decoration: none;
-    margin-top: auto; 
+.project-card:hover {
+    transform: scale(1.05); /* Scale up the card on hover */
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
 }
 
-.project-card:hover {
+.project-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 1rem 1rem;
+}
+
+.project-card .btn {
+    flex: 1;
+    margin: 0 0.5rem;
+    text-align: center;
+    padding: 0.5rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+    color: #fff; /* Default text color for buttons */
+}
+
+/* Blue gradient for 'More Info' buttons */
+.project-card .btn-info {
+    background: linear-gradient(45deg, #2196f3, #64b5f6); /* Blue gradient */
+}
+
+.project-card .btn-info:hover {
+    background: linear-gradient(45deg, #42a5f5, #90caf9); /* Lighter blue on hover */
     transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(33, 150, 243, 0.5);
+}
+
+/* Play button styling */
+.project-card .btn-play {
+    background: linear-gradient(45deg, #ff5722, #ff9800); /* Vibrant gradient */
+}
+
+.project-card .btn-play:hover {
+    background: linear-gradient(45deg, #ff7043, #ffa726);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(255, 152, 0, 0.5);
+}
+
+/* GitHub button styling */
+.project-card .btn-github {
+    background: #333; /* Dark background for GitHub buttons */
+}
+
+.project-card .btn-github:hover {
+    background: #555; /* Lighter shade on hover */
+}
+
+/* Base hover effect for other buttons */
+.project-card .btn:hover {
+    transform: scale(1.05);
+}
+
+#contact {
+    background: #f9f9f9; /* Light background for contrast */
+    padding: 2rem; /* Padding around the section */
+    text-align: center; /* Center text for better appearance */
+}
+
+.contact-info {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center align items */
+    flex-wrap: wrap; /* Allow wrapping to keep responsiveness */
+}
+
+.contact-info p {
+    margin: 0 1rem; /* Add spacing between items */
+}
+
+.contact-info a {
+    color: #2196f3; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.contact-info a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
 }
 
 /* Mobile responsive setup */

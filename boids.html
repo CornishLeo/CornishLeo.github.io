@@ -9,6 +9,7 @@
 <body>
     <div class="container">
         <div class="sliders">
+            <h3> Press 'i' for instructions</h1>
             <label for="boidRadius">Boid Radius: <span id="boidRadiusValue">45</span></label>
             <input type="range" id="boidRadius" min="10" max="80" value="45">
             <label for="barrierRadius">Barrier Radius: <span id="barrierRadiusValue">80</span></label>
@@ -23,10 +24,59 @@
             <input type="checkbox" id="avoidMouse" value="true" checked="true">
             <label for="avoidWalls">Avoid Walls</label>
             <input type="checkbox" id="avoidWalls" value="true" checked="true">
-            <img src="images/fish.png" id="fishImg"style="display: none;">
-            <img src="images/fish2.png" id="fishImg2"style="display: none;">
+            <img src="images/fish.png" id="fishImg" style="display: none;">
+            <img src="images/fish2.png" id="fishImg2" style="display: none;">
         </div>
         <canvas id="canvas"></canvas>
+        
+        <div id="instructions" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Instructions</h2>
+                <p>Welcome to the Boids simulation!</p>
+                <p>Use the sliders to adjust the properties of the boids:</p>
+                
+                <h3>Slider Descriptions</h3>
+                <ul>
+                    <li>
+                        <strong>Boid Radius:</strong> 
+                        <span>This controls the perception range of each boid. A larger radius allows a boid to see more nearby boids, influencing flocking behavior.</span>
+                    </li>
+                    <li>
+                        <strong>Barrier Radius:</strong> 
+                        <span>This sets the distance within which boids will avoid barriers. Increasing this value makes boids more cautious near barriers.</span>
+                    </li>
+                    <li>
+                        <strong>Separation Aim:</strong> 
+                        <span>This defines the desired distance between individual boids. A higher value encourages more space between them to avoid crowding.</span>
+                    </li>
+                    <li>
+                        <strong>Max Speed:</strong> 
+                        <span>This sets the maximum speed at which the boids can move. Adjusting this can change how quickly the flock responds to each other.</span>
+                    </li>
+                    <li>
+                        <strong>Max Force:</strong> 
+                        <span>This parameter controls the maximum steering force a boid can apply when changing direction. Higher values result in sharper turns.</span>
+                    </li>
+                </ul>
+        
+                <h3>Additional Options</h3>
+                <ul>
+                    <li>
+                        <strong>Avoid Mouse:</strong> 
+                        <span>Toggle this option to make boids avoid the mouse cursor, adding a dynamic interaction element.</span>
+                    </li>
+                    <li>
+                        <strong>Avoid Walls:</strong> 
+                        <span>Enable this option for boids to steer away from walls, ensuring they remain within the canvas.</span>
+                    </li>
+                </ul>
+        
+                <p>Click on the canvas to add boids, and right-click to add barriers.</p>
+                <p>Press "i" to toggle this instructions menu.</p>
+            </div>
+        </div>
+        
     </div>
     
     <script src="scripts/boids.js"></script>
