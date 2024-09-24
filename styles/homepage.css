@@ -6,16 +6,67 @@ body {
 }
 
 header {
-    background: #333;
-    color: #fff;
-    padding: 1rem;
-    text-align: center;
+    background: linear-gradient(45deg, #333, #444); 
+    color: #fff; 
+    padding: 2rem 1rem; 
+    text-align: center; 
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); 
+}
+
+header h1 {
+    font-size: 2.5rem; 
+    margin: 0; 
+}
+
+.sub-heading {
+    font-size: 1.2rem; 
+    margin: 0.5rem 0; 
+}
+
+.role {
+    font-size: 1rem; 
+    margin: 0.5rem 0; 
+    font-weight: 300; 
 }
 
 
 section {
     padding: 1rem;
 }
+
+#about {
+    background: #f0f4ff; 
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 2rem; 
+}
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: space-around; 
+}
+
+.about-item {
+    flex: 1 1 200px; 
+    margin: 1rem; 
+    background: #fff; 
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s; 
+}
+
+.about-item:hover {
+    transform: scale(1.05); 
+}
+
+.about-item h3 {
+    margin-top: 0.5rem; 
+    color: #2196f3; 
+}
+
+
 
 .project-grid {
     display: grid;
@@ -56,8 +107,8 @@ section {
 }
 
 .project-card:hover {
-    transform: scale(1.05); /* Scale up the card on hover */
-    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); /* Stronger shadow on hover */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .project-buttons {
@@ -74,23 +125,23 @@ section {
     text-decoration: none;
     border-radius: 5px;
     transition: background 0.3s ease;
-    color: #fff; /* Default text color for buttons */
+    color: #fff; 
 }
 
-/* Blue gradient for 'More Info' buttons */
+
 .project-card .btn-info {
-    background: linear-gradient(45deg, #2196f3, #64b5f6); /* Blue gradient */
+    background: linear-gradient(45deg, #2196f3, #64b5f6); 
 }
 
 .project-card .btn-info:hover {
-    background: linear-gradient(45deg, #42a5f5, #90caf9); /* Lighter blue on hover */
+    background: linear-gradient(45deg, #42a5f5, #90caf9); 
     transform: scale(1.05);
     box-shadow: 0 4px 10px rgba(33, 150, 243, 0.5);
 }
 
-/* Play button styling */
+
 .project-card .btn-play {
-    background: linear-gradient(45deg, #ff5722, #ff9800); /* Vibrant gradient */
+    background: linear-gradient(45deg, #ff5722, #ff9800); 
 }
 
 .project-card .btn-play:hover {
@@ -99,46 +150,46 @@ section {
     box-shadow: 0 4px 10px rgba(255, 152, 0, 0.5);
 }
 
-/* GitHub button styling */
+
 .project-card .btn-github {
-    background: #333; /* Dark background for GitHub buttons */
+    background: #333; 
 }
 
 .project-card .btn-github:hover {
-    background: #555; /* Lighter shade on hover */
+    background: #555; 
 }
 
-/* Base hover effect for other buttons */
+
 .project-card .btn:hover {
     transform: scale(1.05);
 }
 
 #contact {
-    background: #f9f9f9; /* Light background for contrast */
-    padding: 2rem; /* Padding around the section */
-    text-align: center; /* Center text for better appearance */
+    background: #f9f9f9; 
+    padding: 2rem; 
+    text-align: center; 
 }
 
 .contact-info {
-    display: flex; /* Use flexbox for layout */
-    justify-content: center; /* Center align items */
-    flex-wrap: wrap; /* Allow wrapping to keep responsiveness */
+    display: flex; 
+    justify-content: center; 
+    flex-wrap: wrap; 
 }
 
 .contact-info p {
-    margin: 0 1rem; /* Add spacing between items */
+    margin: 0 1rem; 
 }
 
 .contact-info a {
-    color: #2196f3; /* Link color */
-    text-decoration: none; /* Remove underline */
+    color: #2196f3; 
+    text-decoration: none; 
 }
 
 .contact-info a:hover {
-    text-decoration: underline; /* Underline on hover for better UX */
+    text-decoration: underline; 
 }
 
-/* Mobile responsive setup */
+
 @media (max-width: 768px) {
     .project-grid {
         grid-template-columns: 1fr; 
